@@ -1,24 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Roll_em" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Oaz-qn-pIv">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Roll'em Logo1" translatesAutoresizingMaskIntoConstraints="NO" id="kVj-6D-TZH">
+                                <rect key="frame" x="20" y="74" width="374" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="bGN-Bh-ON0"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiceFour" translatesAutoresizingMaskIntoConstraints="NO" id="LbS-Jd-4te">
+                                <rect key="frame" x="45" y="388" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="amX-sZ-l5b"/>
+                                    <constraint firstAttribute="width" constant="120" id="seN-vj-vsq"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DiceThree" translatesAutoresizingMaskIntoConstraints="NO" id="fWJ-1f-loS">
+                                <rect key="frame" x="249" y="388" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="Yge-IV-S6z"/>
+                                    <constraint firstAttribute="height" constant="120" id="aWE-QA-Pby"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vao-yH-fNK">
+                                <rect key="frame" x="60" y="752" width="294" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="wOY-d7-ErB"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="ROLL">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="rollButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ImN-qu-XZn"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Oaz-qn-pIv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5j9-6Q-Xun"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fWJ-1f-loS" secondAttribute="trailing" constant="45" id="5mv-Wh-QWs"/>
+                            <constraint firstAttribute="bottom" secondItem="Oaz-qn-pIv" secondAttribute="bottom" id="CGD-P0-Ezj"/>
+                            <constraint firstItem="fWJ-1f-loS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Fqk-SH-yOH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Vao-yH-fNK" secondAttribute="bottom" constant="60" id="PGl-RX-Yx1"/>
+                            <constraint firstItem="kVj-6D-TZH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="PSe-J8-A8Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vao-yH-fNK" secondAttribute="trailing" constant="60" id="XnI-BL-oL5"/>
+                            <constraint firstItem="Vao-yH-fNK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="YpQ-7w-eyD"/>
+                            <constraint firstItem="Oaz-qn-pIv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bsT-Ak-ztK"/>
+                            <constraint firstItem="kVj-6D-TZH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ilD-sd-3Fb"/>
+                            <constraint firstItem="LbS-Jd-4te" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="lCi-zd-tGG"/>
+                            <constraint firstAttribute="trailing" secondItem="Oaz-qn-pIv" secondAttribute="trailing" id="mVl-NG-TlL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kVj-6D-TZH" secondAttribute="trailing" constant="20" id="tqS-4N-LNY"/>
+                            <constraint firstItem="kVj-6D-TZH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="utb-CZ-xgc"/>
+                            <constraint firstItem="LbS-Jd-4te" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xM0-aG-2dj"/>
+                            <constraint firstItem="Vao-yH-fNK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ynX-Jh-8T6"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="diceImageVeiw2" destination="fWJ-1f-loS" id="zbV-JT-MXd"/>
+                        <outlet property="diceImageView1" destination="LbS-Jd-4te" id="SVZ-Qv-gJV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="DiceFour" width="100" height="100"/>
+        <image name="DiceThree" width="100" height="100"/>
+        <image name="GreenBackground" width="444.5" height="414"/>
+        <image name="Roll'em Logo1" width="1004" height="590"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
